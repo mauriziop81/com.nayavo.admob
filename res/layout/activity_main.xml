@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}"     
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    	 >
+
+    <com.google.android.gms.ads.AdView android:id="@+id/adView" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+                           
+                           ads:adSize="BANNER" 
+                           android:layout_alignParentTop="true"
+                           android:gravity="center"
+                           ads:adUnitId="ca-app-pub-0269953301073925/6031022133"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/adView"
+        android:onClick="showInterstitial"
+        android:text="Show Banner" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/button1"
+            android:layout_alignBottom="@+id/button1"
+            android:layout_alignParentRight="true"
+            android:onClick="refreshBanner"
+            android:text="Refesh Banner" />
+
+</RelativeLayout>
